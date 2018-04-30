@@ -1,4 +1,4 @@
-module.exports = [{
+var friends = [{
     name: 'Alex',
     photo: '',
     scores: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5],
@@ -13,3 +13,5 @@ module.exports = [{
     photo: '',
     scores: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5],
   }];
+
+  module.exports = friends;

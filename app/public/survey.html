@@ -198,7 +198,8 @@
 				<a class="grey-text text-lighten-4 right" href="*">Reference Work</a>
 			</div>
 		</div>
-	</footer> -->
+  </footer> -->
+  
   <!-- Modal Dialog Displaying Closest Friend Match -->
   <div id="resultsModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -243,9 +244,13 @@
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
   crossorigin="anonymous"></script> -->
   <script>
+
+
     // Grab the URL of the website
     // var currentURL = window.location.origin;
     // Capture the form inputs
+    
+    // add friendsData
     $("#submit").on("click", function () {
       //event.preventDefault();
       console.log("Accepted click")
@@ -265,12 +270,12 @@
 
 
 
-        $.post("/api/FRIENDS/new", )
+        $.post("/api/friends/new", )
         .then(function (data) {
           console.log(data);
         });
         Console.log("==================");
-        $.post(currentURL + "/api/friends.js", userData, function (data) {
+        $.post(currentURL + "/api/friends", userData, function (data) {
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#matchName").text(data.name);
           $('#matchImg').attr("src", data.photo);
